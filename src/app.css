@@ -1,0 +1,76 @@
+.my-50{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+header.masthead .page-heading h1,
+header.masthead .site-heading h1,
+header.masthead .post-heading h1{
+  /*text-shadow: 5px 5px 10px var(--primary);*/
+  text-shadow: 5px 5px 10px #0085A1;
+}
+.comment-list{
+  list-style: none;
+}
+.comment-list li{
+  border:1px solid lightgray;
+  padding: 10px;
+}
+.comment-list li h6 span{
+  font-weight: normal;
+}
+.pages-btn{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.jump-input{
+  width:80px;
+}
+.jump-input::placeholder{
+  font-size: 14px;
+}
+.pointer{
+  cursor:pointer;
+}
+
+/* ************************************************************** */
+
+header{
+    background-image: url('./img/home-bg.jpg') !important;
+}
+.login-header{
+  padding: 80px 0 !important;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: #000;
+}
+.navbar-light .navbar-nav .nav-link.btn{
+  color: #fff;
+}
+.nav-register-btn{
+  margin-right: 5px;
+}
+/* ******************************************************* */
+.comment:hover > .comment-time .del-comment-btn{
+  display: block;
+}
+.comment-time{
+  display: flex;
+  justify-content: space-between;
+}
+.del-comment-btn{
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+.del-comment-btn:hover{
+  color: red !important;
+}
+
+
+@media screen and (max-width: 975px) {
+  .nav-register-btn{
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}

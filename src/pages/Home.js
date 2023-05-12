@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PostPreview from '../components/PostPreview';
+import LoginContext from '../context/LoginContext';
 
 const postsPerPage = 5;
 
 const Home = () => {
+
+    const {isloggedin, loggedUser} = useContext(LoginContext);
 
     const [allPosts, setAllPosts] = useState([]);
     const [posts, setPosts] = useState([]);
@@ -59,9 +63,15 @@ const Home = () => {
         <main>
             <div className="container my-50">
                 {errorMSg ? (
-                <section className='mb-5'>
-                    <h1 className='text-center mb-4'>{errorMSg}</h1>
-                    <h6 className='text-center'>Login now and start posting</h6>
+                <section className='mb-5 text-center'>
+                    <h1 className='mb-4'>{errorMSg}</h1>
+                    {isloggedin ? <>
+                        <h6>Hi <span className='themeColor'>{loggedUser.name}</span> add your first post.</h6>
+                        <Link to="/addpost" className="btn btn-primary">Add Post</Link>
+                    </> : <>
+                        <h6>Login now and start posting</h6>
+                    </>}
+                    
                 </section>
                 ) : (
                 <div className="row">

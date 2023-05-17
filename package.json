@@ -2,7 +2,7 @@
   "name": "public-blog",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5500",
+  "proxy": "https://public-blog-api.onrender.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

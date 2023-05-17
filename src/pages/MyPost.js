@@ -20,7 +20,7 @@ const MyPost = () => {
 
     const getMyPosts = async () => {
         try {
-            const res = await fetch("/api/my-posts");
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/my-posts`);
             const result = await res.json();
 
             if(result.error){

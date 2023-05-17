@@ -24,7 +24,7 @@ const AddPost = () => {
     const addThePost = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch("/api/add-post", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/add-post`, {
                 method: "POST",
                 credentials: "include",
                 headers: {

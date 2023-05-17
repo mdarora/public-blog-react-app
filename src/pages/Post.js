@@ -16,7 +16,7 @@ const Post = () => {
 
     const getPost = async () => {
         try {
-            const res = await fetch("/api/post/" + slug);
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/post/${slug}`);
             const result = await res.json();
 
             if(result.post){

@@ -21,7 +21,7 @@ const Home = () => {
 
     const getPosts = async () => {
         try {
-            const res = await fetch("/api/posts");
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/posts`);
             const result = await res.json();
 
             if (result.error) {

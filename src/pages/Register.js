@@ -29,7 +29,7 @@ const Register = () => {
         const {name, username, password, cpassword} = registerValues;
 
         try {
-            const res = await fetch("/api/register", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
                 method: "POST",
                 credentials: "include",
                 headers: {

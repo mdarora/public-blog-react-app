@@ -22,7 +22,7 @@ const Profile = () => {
 
     const getProfilePosts = async () =>{
         try {
-            const res = await fetch("/api/profile/" + username);
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/profile/${username}`);
             const result = await res.json();
 
             if(result.posts){

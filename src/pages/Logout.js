@@ -7,7 +7,7 @@ const Logout = () => {
     const {setIsloggedin, setLoggedUser} = useContext(LoginContext);
     
     useEffect(()=>{
-        fetch("/api/logout").then(()=>{
+        fetch(`${process.env.REACT_APP_API_URL}/logout`).then(()=>{
             setIsloggedin(false);
             setLoggedUser({id: "", name: "", username: ""});
             history.push("/login");

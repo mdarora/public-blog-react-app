@@ -12,7 +12,7 @@ export const LoginState = (props) => {
 
     const loginGet = async () => {
         try {
-            const res = await fetch("/api/login");
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/login`);
             const result = await res.json();
 
             if(result.id){

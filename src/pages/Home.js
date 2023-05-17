@@ -33,6 +33,7 @@ const Home = () => {
             }
 
         } catch (error) {
+            setErrorMSg("Something went wrong!");
             console.log("Catched at Home: ", error);
         }
     }

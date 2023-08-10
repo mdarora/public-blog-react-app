@@ -9,7 +9,7 @@ const AddPost = () => {
     const {isloggedin} = useContext(LoginContext);
 
     if (!isloggedin) {
-        history.push("/");
+        history.push("/login");
     };
 
     const [newPost, setNewPost] = useState({

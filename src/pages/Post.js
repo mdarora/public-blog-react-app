@@ -30,8 +30,9 @@ const Post = () => {
     }
 
     const getComments = async (postId) => {
+        console.log(postId)
         try {
-            const commentsRes = await fetch("/api/comments/" + postId);
+            const commentsRes = await fetch(`${process.env.REACT_APP_API_URL}/comments/${postId}`);
                 const commentsResult = await commentsRes.json();
                 if(commentsResult.comments){
                     setComments(commentsResult.comments);
@@ -50,7 +51,7 @@ const Post = () => {
         }
 
         try {
-            const res = await fetch("/api/add-comment", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/add-comment`, {
                 method: "POST",
                 credentials: "include",
                 headers: {

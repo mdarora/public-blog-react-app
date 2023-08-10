@@ -9,7 +9,7 @@ const Comment = (props) => {
     const deleteComment = async (id) => {
         if(window.confirm("Do you really want to delete this comment ?")){
             try {
-                const res = await fetch("/api/comment/" + id, {
+                const res = await fetch(`${process.env.REACT_APP_API_URL}/comment/${id}`, {
                     method: "DELETE",
                     credentials: "include"
                 });
